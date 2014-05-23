@@ -132,7 +132,7 @@ object Main {
           val isqs = new AmazonSQSClient()
           
           // send the msg
-          isqs.sendMessage(new SendMessageRequest(inQUrl, inJsonStr));
+          isqs.sendMessage(new SendMessageRequest(outQUrl, inJsonStr));
           log.info("Done!")
       }
       case Failure(ex) => {
