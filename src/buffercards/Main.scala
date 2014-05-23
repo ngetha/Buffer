@@ -211,7 +211,7 @@ object Main {
                       log.debug(html)
                       
                       // get the dest dir & write the file
-                      val dest = conf.getString("buffer-app.var-www-dirs.app").
+                      val dest =  System.getProperty("buffer.destdir").
                                   concat(System.getProperty("file.separator")).
                                   concat(cardApp.title.toLowerCase().replace(" ","_"))
                                   .concat(".html")
@@ -255,6 +255,8 @@ object Main {
    * @param args the command line arguments
    */
   def main(args: Array[String]): Unit = {
+    
+    //println(System.getProperty("buffer.destdir"))
    
     // uncomment this to insert some msgs to the inQ
 //    val inJsonMap = new java.util.HashMap[String,String]    
