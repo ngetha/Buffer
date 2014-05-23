@@ -8,15 +8,18 @@ Running
 You will need Scala 2.10.3 / Java 1.7
 
 On a console
-git clone https://github.com/ngetha/Buffer.git
 
+```
+git clone https://github.com/ngetha/Buffer.git
 cd Buffer
-sudo java -Daws.accessKeyId=AKIAILP2AWVSI6CX4RCQ -Daws.secretKey=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 -Dbuffer.destdir=/var/tmp -cp dist/buffer-cards.jar:dist/lib/:/path/to/scala-2.10.3/lib/scala-library.jar buffercards.Main
+sudo java -Daws.accessKeyId=AKIAJ23HM4DAVR3HNL4A -Daws.secretKey=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 -Dbuffer.destdir=/var/tmp -cp dist/buffer-cards.jar:dist/lib/:/path/to/scala-2.10.3/lib/scala-library.jar buffercards.Main
+```
 
 Output
 ======
 You should see
 
+```
 12:52:27,751 INFO  CardProcessor - Starting!
 12:52:29,389 INFO  CardProcessor - Drainig the Queue at https://sqs.eu-west-1.amazonaws.com/649117426437/buffer-in 10 at a time
 12:52:29,406 INFO  CardProcessor - Picking the next batch
@@ -28,5 +31,5 @@ You should see
 12:52:31,436 INFO  CardProcessor - Sending Out JSON -> [{"id":"some-id","cmd":"create-resp","status":"ok","path":"/var/tmp/bufferapp.html"}]
 12:52:31,497 INFO  CardProcessor - Done!
 
-
-And the File /var/tmp/bufferapp.html should contain valid TwitterCard Meta Tags
+```
+And the File ```/var/tmp/bufferapp.html``` should contain valid ```TwitterCard``` Meta Tags
