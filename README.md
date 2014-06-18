@@ -12,7 +12,7 @@ On a console
 ```
 git clone https://github.com/ngetha/Buffer.git
 cd Buffer
-sudo java -Daws.accessKeyId=AKIAJ23HM4DAVR3HNL4A -Daws.secretKey=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 -Dbuffer.destdir=/var/tmp -cp dist/buffer-cards.jar:dist/lib/:/path/to/scala-2.10.3/lib/scala-library.jar buffercards.Main
+sudo java -Daws.accessKeyId=KEYID -Daws.secretKey=KEY -Dbuffer.destdir=/var/tmp -cp dist/buffer-cards.jar:dist/lib/:/path/to/scala-2.10.3/lib/scala-library.jar buffercards.Main
 ```
 
 Output
